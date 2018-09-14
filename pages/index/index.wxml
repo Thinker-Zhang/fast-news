@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 导航条 -->
+  <view class="navbar">
+    <view wx:for="{{navbar}}" wx:key="{{item}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">{{item.name}}</view>
+  </view>
+  <!-- 新闻列表 -->
+  <view class="news-list">
+    <view class="news-list-item" wx:for="{{newsList}}" wx:key="{{item}}" bindtap="ToNewsDetail" data-id="{{item.id}}">
+      <view class="list-item-left">
+        <view class="list-item-title">{{item.title}}</view>
+        <view class="list-item-bottom">
+          <view wx:if="{{item.source}}" class="list-item-source">{{item.source}}</view>
+          <view>{{item.date}}</view>
+        </view>
+      </view>
+      <view class="list-item-right">
+        <image wx:if="{{item.firstImage}}" class="list-item-img" src="{{item.firstImage}}" mode="aspectFill"></image>
+        <image wx:else class="list-item-img" src="../../images/default.png" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+</view>

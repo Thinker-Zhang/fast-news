@@ -1,0 +1,41 @@
+/* detail.css */
+
+.news-detail-title {
+  padding: 25rpx;
+  font-size: 36rpx;
+}
+
+.news-detail-info {
+  padding: 0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.news-detail-source {
+  margin-right: 25rpx;
+}
+
+.news-detail-content {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 25rpx;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 48rpx;
+}
+
+.news-detail-image {
+  width: 100%;
+  margin: 20rpx 0;
+}
+
+.news-detail-words {
+  margin: 20rpx 0;
+}
+
+.news-detail-strong {
+  font-size: 30rpx;
+  font-weight: bold;
+}
