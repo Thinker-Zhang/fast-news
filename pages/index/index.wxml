@@ -4,6 +4,17 @@
   <view class="navbar">
     <view wx:for="{{navbar}}" wx:key="{{item}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">{{item.name}}</view>
   </view>
+  <!-- 热门新闻 -->
+  <image wx:if="{{hotNews}}" class="hot-news" src="{{hotNews.firstImage ? hotNews.firstImage : '../../images/default.png'}}" mode="aspectFill" bindtap="ToNewsDetail" data-id="{{hotNews.id}}">
+    <view class="hot-news-content">
+      <view class="hot-news-tag">热门</view>
+      <view class="hot-news-title">{{hotNews.title}}</view>
+      <view class="hot-news-bottom">
+        <view wx:if="{{hotNews.source}}" class="hot-news-source">{{hotNews.source}}</view>
+        <view>{{hotNews.date}}</view>
+      </view>
+    </view>
+  </image>
   <!-- 新闻列表 -->
   <view class="news-list">
     <view class="news-list-item" wx:for="{{newsList}}" wx:key="{{item}}" bindtap="ToNewsDetail" data-id="{{item.id}}">
@@ -15,8 +26,7 @@
         </view>
       </view>
       <view class="list-item-right">
-        <image wx:if="{{item.firstImage}}" class="list-item-img" src="{{item.firstImage}}" mode="aspectFill"></image>
-        <image wx:else class="list-item-img" src="../../images/default.png" mode="aspectFill"></image>
+        <image class="list-item-img" src="{{item.firstImage ? item.firstImage : '../../images/default.png'}}" mode="aspectFill"></image>
       </view>
     </view>
   </view>

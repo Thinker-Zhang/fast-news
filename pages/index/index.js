@@ -25,6 +25,7 @@ Page({
     }], // 新闻分类
     currentTab: 0, // 当前分类
     newsList: [], // 新闻列表
+    hotNews: null, // 热门新闻
   },
   // 页面加载监听函数
   onLoad() {
@@ -69,15 +70,24 @@ Page({
         if (res.data.code === 200) {
           let newsList = res.data.result;
           newsList.forEach(item => {
-            item.date = item.date.substring(11, 16); // 处理新闻发布日期
+            item.date = item.date.substring(0, 10) + ' ' + item.date.substring(11, 16); // 处理新闻发布日期
           })
+          let hotNews = newsList.shift();
           this.setData({
-            newsList
+            newsList,
+            hotNews
           })
         }
       },
+      fail: err => {
+        console.log(err)
+        wx.showToast({
+          title: '请求失败',
+          icon: 'loading'
+        })
+      },
       complete: () => {
-        callback && callback(); // 回调函数
+        typeof callback === 'function' && callback(); // 回调函数
       }
     })
   }

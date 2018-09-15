@@ -2,7 +2,7 @@
 
 ## 项目概述
 
-在这个项目中, 你将会从数据库中获取新闻，并以列表方式呈现。你完成的这个小程序，可以显示不同门类的热点新闻列表，也可以点击访问具体的新闻内容。你可以使用[我们准备好的 API](https://github.com/udacity/wmpnd-news/blob/master/news_api.md)，也可以使用真实的新闻数据。
+在这个项目中, 你将会从数据库中获取新闻，并以列表方式呈现。你完成的这个小程序，可以显示不同门类的热点新闻列表，也可以点击访问具体的新闻内容。你可以使用[我们准备好的 API](https://github.com/Thinker-z/fast-news/blob/master/news_api.md)，也可以使用真实的新闻数据。
 
 这个项目不会提供任何代码，你需要新建自己的小程序。
 
@@ -10,8 +10,8 @@
 
 下图为小程序样式参考
 
-![新闻列表](https://raw.githubusercontent.com/udacity/wmpnd-news/master/%E6%96%B0%E9%97%BB%E5%88%97%E8%A1%A8.png)
-![新闻详情](https://raw.githubusercontent.com/udacity/wmpnd-news/master/%E6%96%B0%E9%97%BB%E8%AF%A6%E6%83%85.png)
+![新闻列表](https://github.com/Thinker-z/fast-news/master/%E6%96%B0%E9%97%BB%E5%88%97%E8%A1%A8.png)
+![新闻详情](https://github.com/Thinker-z/fast-news/master/%E6%96%B0%E9%97%BB%E8%AF%A6%E6%83%85.png)
 
 图1.小程序“国内新闻”列表页&emsp; &nbsp; &nbsp; &nbsp; &emsp; &nbsp; &nbsp; &nbsp; 图2.小程序“国际新闻”详情页
 
@@ -56,3 +56,7 @@
 |                           注释                           | 含有注释，以有效说明很长的代码流程。                         |
 |                           编码                           | 使用 `wx:for` 动态的显示新闻分类部分（`国内`，`国际`，`财经`，`娱乐`，`军事`，`体育` 和 `其他`）。 |
 
+### 问题
+
+- 导航栏自定义添加图片暂时没有思路，无法做到
+- 热门新闻内边框圆角暂时没有思路，无法做到

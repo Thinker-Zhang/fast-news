@@ -6,7 +6,7 @@
       <view wx:if="{{newsDetail.source}}" class="news-detail-source">{{newsDetail.source}}</view>
       <view>{{newsDetail.date}}</view>
     </view>
-    <view>阅读 {{newsDetail.readCount}}</view>
+    <view wx:if="{{newsDetail.readCount}}">阅读 {{newsDetail.readCount}}</view>
   </view>
   <view class="news-detail-content">
     <block wx:for="{{newsDetail.content}}" wx:key="{{item}}">
