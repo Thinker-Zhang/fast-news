@@ -42,12 +42,12 @@
 
 .hot-news-content {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 28rpx solid rgba(255, 255, 255, 0.8);
+  left: 30rpx;
+  top: 30rpx;
+  width: 690rpx;
+  height: 400rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 0 60rpx rgba(255, 255, 255, 0.8);
 }
 
 .hot-news-tag {
@@ -56,7 +56,7 @@
   top: 0;
   padding: 5rpx 15rpx 8rpx 25rpx;
   border-bottom-left-radius: 20rpx;
-  border-top-right-radius: 5rpx;
+  border-top-right-radius: 10rpx;
   background-color: rgb(197, 76, 76);
   font-size: 30rpx;
   color: #fff;
